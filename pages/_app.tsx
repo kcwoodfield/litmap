@@ -12,7 +12,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <title>Home Sweet Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   )
 }

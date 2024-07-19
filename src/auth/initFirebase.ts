@@ -8,7 +8,17 @@ const config = {
 }
 
 export default function initFirebase() {
-    if (!firebase.apps.length) {
+    if ( !firebase.apps.length ) {
         firebase.initializeApp(config);
     }
 }
+
+interface IAuthContext = {
+
+}
+
+const AuthContext = createContext({
+    user: null,
+    logout: () => null,
+    authenticated: false,
+})

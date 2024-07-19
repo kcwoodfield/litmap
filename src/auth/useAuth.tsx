@@ -12,3 +12,15 @@ import initFirebase from "./initFirebase";
 import { removeTokenCookie, setTokenCookie } from "./tokenCookies";
 
 initFirebase();
+
+interface IAuthContext {
+    user: firebase.User | null;
+    logout: () => void;
+    authenticated: boolean;
+}
+
+const AuthContext = createContext<IAuthContext>({
+    user: null,
+    logout: () => null,
+    authenticated: false,
+});
